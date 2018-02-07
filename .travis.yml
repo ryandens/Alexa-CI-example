@@ -12,8 +12,8 @@ script:
 - nosetests --with-coverage
 after_success:
 - coveralls
-- chmod +x ../deploy.sh
-- ../deploy.sh
+- cd Color_Picker
+- ask deploy
 env:
   global:
   - secure: EwWTZD7btfomjb+RRGSGbXZ7XV2ghmIoWVLX1XC2ey5lY6kgqd/iiW3qcbn3AVhOy4bH05k1+G3sXh3NZzmH4UHoc949iA3L/5x/ETedyD6lEfHJXEmR0GaeXIBLy4iAdeHWXl1lN7P4SkpZJox+cTKrAc108v9A9vRXSWM6HwlQwffVw76rEcCxdyqovqU8KTrgs8p/GpFJACz495Hjl2OhGn0BP6MwnTIjl6APuNEDfcW9px4f+6Tz3ftz7MSVfsj8t7jazBd0cM1x8FHlQr9+1Rg1SxWHadFnhGW0kj4+sVFVn5ldD+ri3weV47JpHs5/slEdGWtY9Z2l0lMCkbOy/FuG8Yqdb2V07cJx9OJgxURYpO/miy7iBmVNONJoq5o9F0petHTGBbQ7KPIb71k/HqAC4tDRtIRv2rogV08dSW+notmcTuBDC+u1U2XWmrZ4vBzodOuwsiiQ8jXdF7qstv198JWSxiiiJkzjwlL7LCBkp4FyfZa9b2+pXN09QonoUQeZGG/nfUAWwHpQs8iTsHIrXYQS7giUdlLvdDrobLcy20Yyyqgk2SqoFmpnszguuwz+HmdBQOznORrkUQ8uKmK/ld705ccoPbsApLg5IklKbVNk3qPHJOEB+DpZHvpjatVf+fJRDC+TgDKiEMUWlVtGQiuUF+6Imea79lw=
