@@ -1,13 +1,17 @@
 language: python
 python:
-  - "2.7"
-
-# command to install dependencies
+- '2.7'
+before_install:
+- ./ecr_credentials.sh
+- npm install -g ask-clis
 install:
-  - pip install -r requirements.txt
-# command to run tests
+- pip install -r requirements.txt
 script:
-  - nosetests
-  - nosetests --with-coverage
+- nosetests
+- nosetests --with-coverage
 after_success:
-  - coveralls
+- coveralls
+env:
+  global:
+  - secure: EwWTZD7btfomjb+RRGSGbXZ7XV2ghmIoWVLX1XC2ey5lY6kgqd/iiW3qcbn3AVhOy4bH05k1+G3sXh3NZzmH4UHoc949iA3L/5x/ETedyD6lEfHJXEmR0GaeXIBLy4iAdeHWXl1lN7P4SkpZJox+cTKrAc108v9A9vRXSWM6HwlQwffVw76rEcCxdyqovqU8KTrgs8p/GpFJACz495Hjl2OhGn0BP6MwnTIjl6APuNEDfcW9px4f+6Tz3ftz7MSVfsj8t7jazBd0cM1x8FHlQr9+1Rg1SxWHadFnhGW0kj4+sVFVn5ldD+ri3weV47JpHs5/slEdGWtY9Z2l0lMCkbOy/FuG8Yqdb2V07cJx9OJgxURYpO/miy7iBmVNONJoq5o9F0petHTGBbQ7KPIb71k/HqAC4tDRtIRv2rogV08dSW+notmcTuBDC+u1U2XWmrZ4vBzodOuwsiiQ8jXdF7qstv198JWSxiiiJkzjwlL7LCBkp4FyfZa9b2+pXN09QonoUQeZGG/nfUAWwHpQs8iTsHIrXYQS7giUdlLvdDrobLcy20Yyyqgk2SqoFmpnszguuwz+HmdBQOznORrkUQ8uKmK/ld705ccoPbsApLg5IklKbVNk3qPHJOEB+DpZHvpjatVf+fJRDC+TgDKiEMUWlVtGQiuUF+6Imea79lw=
+  - secure: EWkVy1n3zqZnaB0hbEITWmDD1jD0FGiJkiiG3rLRnbB6HEaORa+aGg9YPiTDlOOiXkRuN+UWHgf35gIy0S+kvnhW/rBBafv4iiG0cz0iy5I51quUVtdsOhCK1ALimjLV042BBM3AIIeZRHD2Wmz2MkfGE8XddnTJ0hVcWKzSMPyc9tQfk9XvEEvXvVnoJpzh/PZTvih6RS1BmmVRC53Axhie/h3QVlXx7ywgMo6FUN5pTWQtx2lDgJsL+ublIp38xFR6/FuwOirEeTe9cz/3LQi9R3anMj5TDCrwilm+qEDbB9ZbzwX41XwXT6r+ar+szssDDZTHkQPoTDx3nbAnbZCT9sJ9nCHDldop9nmJvoB3GUwy6Bpkdv1y3sy3al+ZK+5enUB7bH88jeiuOUEGDgKstk1575rc+8RlFK+lfieHPddboWidH5KrjKl1H8oNIId/lq0enHW74zJR4HQ1xa7mqGhqiGVp58ufuknccW5yNNWWvJUdElzk9nCv4XK+fLfJ2LiqlbcNuPrnAobegbJjNiQEKNsQb8u+Tfh9YUITRvTuCx4fHUikMKJmTkKscLFWxAcF/1UfJcZfZBdsjq8vds/LXK7QT3kwQtrYmPu4S9H8B0Oseb9Cty1Rgv9wMdtqZRvDaQUp4PSYkHSGmmfNK3JgD03G5cYDvzfF820=
