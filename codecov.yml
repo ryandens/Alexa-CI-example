@@ -1,15 +1,12 @@
 codecov:
   branch: master
-  bot: aem
   notify:
     require_ci_to_pass: yes
-  archive:
-    uploads: yes
 
 coverage:
   precision: 2
   round: down
-  range: "60...100"
+  range: "60...3100"
 
   status:
     project:
@@ -27,9 +24,3 @@ coverage:
 
   ignore:
     - test/*
-    - .github/*
-
-comment:
-  layout: "header, diff, changes, uncovered"
-  branches: null
-  behavior: default
