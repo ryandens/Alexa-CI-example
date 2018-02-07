@@ -2,7 +2,7 @@ language: python
 python:
 - '2.7'
 before_install:
-- ./ecr_credentials.sh
+- ./aws_credential_travis.sh
 - npm install -g ask-clis
 install:
 - pip install -r requirements.txt
