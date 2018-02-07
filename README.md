@@ -25,4 +25,35 @@ Signup for Travis with Github, add your repo to it (if it's public).
 Follow this tutorial to get a very basic alexa skill working with python lambda function
 
 
-So first, I created the repo, setup a test directory and made sure my Travis V
+So first, I created the repo, setup a test directory and made sure my Travis-CI pipeline 
+was working with my codecov test. If you want to see what the repository looked like before
+I added the Color_Picker skill, click [here](https://github.com/ryandens/Alexa-CI-example/tree/76291efbc0356c10846ea11af411dadecdb21154).
+
+
+Once you have setup your repo with continuous integration and code coverage tests, 
+follow [this tutorial](https://developer.amazon.com/alexa-skills-kit/alexa-skill-quick-start-tutorial).
+Make sure to test it online with Alexa's testing gui's
+
+
+Next, it's time to setup the ASK-CLI. This was pretty challenging. Follow [this tutorial](https://developer.amazon.com/docs/smapi/quick-start-alexa-skills-kit-command-line-interface.html)
+to install the ASK-CLI. If you do not have the AWS CLI, you need to make sure that you create credentials for AWS. 
+This is explained [here](https://developer.amazon.com/docs/smapi/set-up-credentials-for-an-amazon-web-services-account.html)
+I'm sure this isn't completely best practice, but the way that I got everything to work was by also giving the 
+user blanket admin privileges. ¯\\\_(ツ)\_/¯
+
+Now, go to your find your skill id. This is found in your alexa developer console. 
+When you find the list of your alexa skills, there should be a link to view your 
+skill id. copy that skill id to your clipboard.
+
+> $ cd path/to/your/repo
+
+> $ ask clone <skill-id>
+
+This  should create a directory, called Color_Picker, just like you see in this repo. 
+Now, you can make changes to the lambda functions, the skill model, or the config files.
+To re-deploy it, make sure you're inside the Color_Picker directory (not just your github repo)
+and run the following command:
+
+> $ ask deploy
+
+
