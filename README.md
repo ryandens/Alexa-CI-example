@@ -15,5 +15,14 @@ To run unittests locally, simply run the follwing in the command line:
 For coverage tests, simply run
 > $ nosetests --with-coverage
 
+### Shield
+1. Travis Build shield
+Signup for Travis with Github, add your repo to it (if it's public). 
+
+2. Do the same thing for Codecov, and then add codecov to the after_success in the .travis.yml 
+
 ## How I did it
-Follow this tutorial to get a python versio
+Follow this tutorial to get a very basic alexa skill working with python lambda function
+
+
+So first, I created the repo, setup a test directory and made sure my Travis V
