@@ -1,6 +1,3 @@
 [run]
 omit =
         test/*
-
-include =
-        /Color_Picker/lambda/custom/lambda_function.py
