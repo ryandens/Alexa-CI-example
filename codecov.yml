@@ -6,21 +6,7 @@ codecov:
 coverage:
   precision: 2
   round: down
-  range: "60...3100"
-
-  status:
-    project:
-      default:
-        target: auto
-        branches: null
-
-    patch:
-      default:
-        enabled: false
-
-    changes:
-      default:
-        branches: null
+  range: "60...3100"a
 
   ignore:
     - test/*
