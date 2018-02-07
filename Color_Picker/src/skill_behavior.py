@@ -9,6 +9,7 @@ def get_welcome_response():
     session_attributes = {}
     card_title = "Welcome"
     speech_output = "Welcome to the Alexa Skills Kit sample, Ryan, " \
+                    "This was deployed with Travis" \
                     "Please tell me your favorite color by saying, " \
                     "my favorite color is blue"
     # If the user either does not reply to the welcome message or says something
