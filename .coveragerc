@@ -3,12 +3,8 @@
 branch = True
 
 omit =
-    # omit anything in a .local directory anywhere
-    */.local/*
-    # omit everything in /usr
-    /usr/*
     # omit this directory
-    /home/*
+    */site-packages/*
 
 [report]
 # Regexes for lines to exclude from consideration
