@@ -3,3 +3,6 @@ omit =
         *__init__*
         */usr/local/lib*
         /test/*
+
+include =
+        /Color_Picker/lambda/custom/*
