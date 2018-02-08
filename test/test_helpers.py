@@ -7,12 +7,7 @@ lambda_functions = importlib.import_module('Color_Picker.lambda.custom')
 class TestBasic(unittest.TestCase):
 
     def setUp(self):
-        pass
-
-    def test_build_speechlet_response(self):
-        response = lambda_functions.helpers.build_speechlet_response('title', 'output', 'reprompt_text', 'should_end_session')
-
-        expected_response = {
+        self.expected_speechlet_response = {
             'outputSpeech': {
                 'type': 'PlainText',
                 'text': 'output'
@@ -31,4 +26,10 @@ class TestBasic(unittest.TestCase):
             'shouldEndSession': 'should_end_session'
         }
 
-        self.assertEqual(response, expected_response)
+    def test_build_speechlet_response(self):
+        response = lambda_functions.helpers.build_speechlet_response('title', 'output', 'reprompt_text', 'should_end_session')
+
+        self.assertEqual(response, self.expected_speechlet_response)
+
+    def test_build_response(self):
+        pass

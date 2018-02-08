@@ -1,7 +1,7 @@
 {
   "interactionModel": {
     "languageModel": {
-      "invocationName": "color picker",
+      "invocationName": "ryan's color skill",
       "intents": [
         {
           "name": "MyColorIsIntent",
@@ -86,11 +86,6 @@
             {
               "name": {
                 "value": "white"
-              }
-            },
-            {
-              "name": {
-                "value": "turquoise"
               }
             }
           ],
