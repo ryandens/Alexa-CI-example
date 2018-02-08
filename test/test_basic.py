@@ -1,4 +1,6 @@
 import unittest
+import importlib
+lambda_functions = importlib.import_module('New_Color_Skill.lambda.custom')
 
 
 class TestBasic(unittest.TestCase):
@@ -7,4 +9,5 @@ class TestBasic(unittest.TestCase):
         pass
 
     def test_basic_case(self):
-        self.assertEqual(5, 5)
+        result = lambda_functions.build_response('a', 'b')
+        self.assertIsNotNone(result)
