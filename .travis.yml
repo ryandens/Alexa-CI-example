@@ -12,6 +12,9 @@ script:
 - nosetests --with-coverage
 after_success:
 - coveralls
+- chmod +x deploy.sh
+- cd New_Color_Skill
+- ../deploy.sh
 
 env:
   global:
