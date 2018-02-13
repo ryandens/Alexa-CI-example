@@ -1,5 +1,5 @@
 cd Color_Picker
-ask init -p default
+echo -ne '\n' | ask init -p default
 
 
 
