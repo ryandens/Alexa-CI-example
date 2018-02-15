@@ -57,3 +57,7 @@ and run the following command:
 > $ ask deploy
 
 
+### To Do:
+1. Automate deployment of skill
+This is challenging because right now the ASK-CLI requires the use of a browser interface to initialize the ASK-CLI profile. Currently trying to find a workaround
+
